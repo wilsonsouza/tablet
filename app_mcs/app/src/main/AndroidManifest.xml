@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="br.com.tk.mcs">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission-sdk-23 android:name="android.permission.VIBRATE"/>
+    <uses-permission-sdk-23 android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission-sdk-23 android:name="android.permission.BLUETOOTH"/>
+    <uses-permission-sdk-23 android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission-sdk-23 android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_FRAME_BUFFER"/>
+
+    <supports-screens android:smallScreens="true"/>
+    <supports-screens android:anyDensity="true"/>
+    <supports-screens android:compatibleWidthLimitDp="800"/>
+    <supports-screens android:largeScreens="true"/>
+    <supports-screens android:normalScreens="true"/>
+    <supports-screens android:resizeable="true"/>
+    <supports-screens android:xlargeScreens="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_company"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activity.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.ManageLanes"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity
+            android:name=".Activity.ConfigurationActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".Activity.RegisterLaneActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Activity.ConfigurationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.ConfigurationActivity"/>
+        </activity>
+        <activity
+            android:name=".Activity.ActivitySetIPSquare"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Activity.ConfigurationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.ConfigurationActivity"/>
+        </activity>
+        <activity
+            android:name=".Activity.GetImageOfMSCActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTop"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode"/>
+    </application>
+</manifest>
