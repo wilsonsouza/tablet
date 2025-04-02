@@ -1,3 +1,1 @@
-The APP Track Tablet (ViaApp) and an application developed for Android operating system whose function is the emergency control of the unassisted lanes in the toll collection place of the concessionaire.
-Disassembled lanes are understood to mean all those that do not have a cabin with a responsible operator within them (Automatic mode lanes and free lanes / Auxiliary lanes)
-The functionality is focused on solving transient anomalies in automatic tracks (AVI).
+The Track Tablet APP (ViaApp) is an Android application developed to manage emergency situations in unattended toll lanes. These lanes, including automatic (AVI) and auxiliary/free lanes, operate without a staffed operator. The application's primary function is to resolve temporary malfunctions and anomalies within the automatic toll collection system.
